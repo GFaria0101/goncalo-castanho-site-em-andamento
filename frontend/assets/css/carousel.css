@@ -1,0 +1,148 @@
+/* Testimonial Carousel */
+.testimonial-carousel {
+    padding: 3rem 0 6rem;
+    position: relative;
+}
+
+.testimonial-slide {
+    padding: 1rem;
+    height: auto;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    height: 100%;
+    transition: var(--transition);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.client-photo {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2rem solid var(--primary);
+}
+
+.client-info h4 {
+    font-size: 1.8rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.client-info span {
+    font-size: 1.4rem;
+    color: var(--text-light);
+}
+
+.testimonial-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary);
+    opacity: 0.3;
+    line-height: 0;
+}
+
+.testimonial-text::before {
+    margin-right: 0.5rem;
+    vertical-align: -0.5rem;
+}
+
+.testimonial-text::after {
+    margin-left: 0.5rem;
+    vertical-align: -0.5rem;
+}
+
+.rating {
+    color: var(--secondary);
+    font-size: 1.6rem;
+}
+
+/* Swiper Navigation */
+.swiper-pagination {
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    background: #ccc !important;
+    opacity: 1 !important;
+    transition: var(--transition) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+    transform: scale(1.3);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary) !important;
+    transition: var(--transition) !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: scale(1.2);
+}
+
+/* Gallery Carousel */
+.gallery-carousel {
+    padding: 2rem;
+    margin: 0 -2rem;
+}
+
+.gallery-slide {
+    padding: 1rem;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-slide img {
+        height: 300px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-slide img {
+        height: 250px;
+    }
+    
+    .testimonial-card {
+        padding: 2rem;
+    }
+}
