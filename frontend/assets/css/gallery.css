@@ -232,13 +232,6 @@
     }
 }
 
-/* Para todas as imagens */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* Específico para imagens de blog */
 .blog-featured-image {
     width: 100%;

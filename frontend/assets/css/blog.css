@@ -135,3 +135,57 @@
         margin-left: 0;
     }
 }
+
+/* Artigos Listagem */
+.articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.article-card {
+    background: var(--white);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-card-content {
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .articles-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    
+    .article-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .articles-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-card img {
+        height: 160px;
+    }
+    
+    .article-card-content {
+        padding: 1.5rem;
+    }
+}

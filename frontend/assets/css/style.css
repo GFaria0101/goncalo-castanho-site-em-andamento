@@ -5,10 +5,11 @@
   --secondary: #f8b400;
   --text: #2c3639;
   --text-light: #5c5c5c;
-  --background: #f9f9f9;
-  --white: #ffffff;
   --gray: #e4e4e4;
+  --gray-light: #f5f5f5;
+  --white: #ffffff;
   --shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
 }
 
 /* Controle geral de imagens */
@@ -17,6 +18,7 @@ img {
   height: auto;
   display: block;
   border-radius: 0.5rem;
+  object-fit: cover;
 }
 
 /* Imagens específicas */
@@ -577,5 +579,108 @@ footer .social a:hover {
 
     .title {
         font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 0;
+  }
+  
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .title {
+    font-size: 2.4rem;
+  }
+}
+
+
+/* Para formulários */
+input, textarea, select {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+/* Para tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+th, td {
+  padding: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gray);
+}
+
+th {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+/* Metodologia Section */
+.methodology-section {
+    padding: 6rem 0;
+}
+
+.methodology-item {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow);
+}
+
+.methodology-item h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .methodology-section {
+        padding: 4rem 0;
+    }
+    
+    .methodology-item {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .methodology-item h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .methodology-section {
+        padding: 3rem 0;
+    }
+    
+    .methodology-item {
+        padding: 1rem;
     }
 }
