@@ -1,176 +1,256 @@
-<!DOCTYPE html><html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Método Terapêutico | Dr. Gonçalo Castanho</title> <meta name="description" content="Abordagem terapêutica baseada em Terapia Cognitivo-Comportamental e técnicas integrativas">
-<!-- CSS -->
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/gallery.css">
-
-<!-- Favicon -->
-<link rel="icon" href="../assets/img/icons/favicon.ico" type="image/x-icon">
-
-<!-- Fontes -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-
-<!-- Ícones -->
-<link rel="stylesheet" href="../assets/fonts/style.css">
-</head> <body> <!-- Header --> <header id="header" class="scroll"> <nav class="container"> <a class="logo" href="../index.html">Dr. <span>Castanho</span></a> <div class="menu"> <ul class="grid"> <li><a class="title" href="../index.html#home">Início</a></li> <li><a class="title" href="psicologo.html">Sobre</a></li> <li><a class="title" href="metodologia.html">Método</a></li> <li><a class="title" href="../blog/">Artigos</a></li> <li><a class="title" href="../index.html#contact">Contato</a></li> </ul> </div> <div class="toggle icon-menu"></div> <div class="toggle icon-close"></div> </nav> </header>
-<main>
-    <!-- Hero -->
-    <section class="hero">
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologia - Gonçalo Castanho</title>
+    <meta name="description" content="Conheça a metodologia de trabalho de Gonçalo Castanho - processos criativos e estratégicos para projetos de design e desenvolvimento">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/carousel.css">
+    
+    <style>
+        .methodology-hero {
+            background-color: var(--light-bg);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .methodology-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        
+        .step {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .step-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+        
+        .testimonials {
+            background-color: var(--light-bg);
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-text);
+        }
+        
+        @media (max-width: 768px) {
+            .methodology-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <h1>Método Terapêutico</h1>
-            <p>Abordagem integrativa baseada em evidências científicas</p>
-        </div>
-    </section>
-
-    <!-- Abordagem -->
-    <section class="section">
-        <div class="container grid">
-            <div class="image">
-                <img src="../assets/img/profissional/abordagem-terapeutica.webp" 
-                     alt="Dr. Castanho em sessão"
-                     loading="lazy"
-                     width="600"
-                     height="400">
-            </div>
-            <div class="text">
-                <h2 class="title">Terapia Cognitivo-Comportamental (TCC)</h2>
-                <p>Minha prática é fundamentada na TCC, abordagem com comprovada eficácia no tratamento de:</p>
-                <ul class="custom-list">
-                    <li><i class="icon-check"></i> Transtornos de ansiedade</li>
-                    <li><i class="icon-check"></i> Depressão</li>
-                    <li><i class="icon-check"></i> Dificuldades de regulação emocional</li>
-                    <li><i class="icon-check"></i> Problemas de relacionamento</li>
+            <a href="../index.html" class="logo">Gonçalo Castanho</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../sobre.html">Sobre</a></li>
+                    <li><a href="../portfolio.html">Portfólio</a></li>
+                    <li><a href="metodologia.html" class="active">Metodologia</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
                 </ul>
-                <p>A TCC trabalha identificando e modificando padrões de pensamento disfuncionais que influenciam emoções e comportamentos.</p>
-            </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </section>
+    </header>
 
-    <!-- Técnicas Integrativas -->
-    <section class="section bio-section">
+    <main>
+        <!-- Seção Hero -->
+        <section class="methodology-hero">
+            <div class="container">
+                <h1>Minha Metodologia</h1>
+                <p class="subtitle">Processos criativos e estratégicos para resultados excepcionais</p>
+            </div>
+        </section>
+
+        <!-- Seção de Passos da Metodologia -->
+        <section class="container">
+            <div class="methodology-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Descoberta</h3>
+                    <p>Análise detalhada do projeto, pesquisa de mercado e definição de objetivos claros para garantir que a solução atenda às necessidades reais.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Estratégia</h3>
+                    <p>Desenvolvimento de um plano estratégico com cronograma, orçamento e roadmap do projeto, alinhando expectativas com o cliente.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Design</h3>
+                    <p>Criação de wireframes, protótipos e designs visuais que combinam estética e funcionalidade para uma experiência de usuário excepcional.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Desenvolvimento</h3>
+                    <p>Implementação técnica com as melhores práticas de codificação, garantindo performance, segurança e compatibilidade.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <h3 class="step-title">Testes</h3>
+                    <p>Validação rigorosa em diferentes dispositivos e cenários para garantir qualidade e identificar oportunidades de melhoria.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">06</div>
+                    <h3 class="step-title">Entrega</h3>
+                    <p>Lançamento do projeto com suporte pós-implantação e acompanhamento para garantir sucesso contínuo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section class="section testimonials">
+            <div class="container">
+                <h2 class="section-title">O que dizem meus clientes</h2>
+                <div class="swiper testimonial-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="../assets/img/testimonials/client-1.webp" 
+                                     alt="Maria Silva"
+                                     width="100"
+                                     height="100"
+                                     loading="lazy">
+                                <div class="testimonial-content">
+                                    <p>"O Gonçalo transformou completamente nossa presença online. Sua abordagem metódica e atenção aos detalhes fizeram toda a diferença."</p>
+                                    <div class="client-info">
+                                        <h4>Maria Silva</h4>
+                                        <span>CEO, Empresa X</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="../assets/img/testimonials/client-2.webp" 
+                                     alt="João Pereira"
+                                     width="100"
+                                     height="100"
+                                     loading="lazy">
+                                <div class="testimonial-content">
+                                    <p>"Trabalhar com o Gonçalo foi uma experiência incrível. Ele trouxe ideias inovadoras e entregou além das nossas expectativas."</p>
+                                    <div class="client-info">
+                                        <h4>João Pereira</h4>
+                                        <span>Diretor de Marketing, Empresa Y</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <img src="../assets/img/testimonials/client-3.webp" 
+                                     alt="Ana Oliveira"
+                                     width="100"
+                                     height="100"
+                                     loading="lazy">
+                                <div class="testimonial-content">
+                                    <p>"A metodologia clara e as entregas pontuais tornaram o processo muito tranquilo. Recomendo sem hesitação!"</p>
+                                    <div class="client-info">
+                                        <h4>Ana Oliveira</h4>
+                                        <span>Fundadora, Startup Z</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <h2 class="title">Técnicas Integrativas</h2>
-            <p class="subtitle">Complementando a TCC com abordagens contemporâneas</p>
-
-            <div class="cards grid">
-                <div class="card">
-                    <i class="icon-brain"></i>
-                    <h3 class="title">Mindfulness</h3>
-                    <p>Técnicas de atenção plena para redução de estresse e aumento da consciência emocional.</p>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Gonçalo Castanho</h3>
+                    <p>Designer e desenvolvedor focado em criar soluções digitais que combinam beleza e funcionalidade.</p>
                 </div>
-                <div class="card">
-                    <i class="icon-heart"></i>
-                    <h3 class="title">Terapia do Esquema</h3>
-                    <p>Trabalho com padrões emocionais profundos desenvolvidos desde a infância.</p>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../sobre.html">Sobre</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="metodologia.html">Metodologia</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <i class="icon-users"></i>
-                    <h3 class="title">Terapia Focada em Compaixão</h3>
-                    <p>Desenvolvimento da autocompaixão como ferramenta de mudança.</p>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>Email: <a href="mailto:contato@goncalocastanho.com">contato@goncalocastanho.com</a></li>
+                        <li>Telefone: <a href="tel:+351123456789">+351 123 456 789</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Gonçalo Castanho. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                    <a href="#" aria-label="Behance"><i class="icon-behance"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Processo Terapêutico -->
-    <section class="section">
-        <div class="container">
-            <h2 class="title">Como Funciona o Processo</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="year">1ª Sessão</div>
-                    <div class="timeline-content">
-                        <h3>Avaliação Inicial</h3>
-                        <p>Entendimento da demanda, histórico e estabelecimento de objetivos terapêuticos.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="year">2-4 Sessões</div>
-                    <div class="timeline-content">
-                        <h3>Formulação do Caso</h3>
-                        <p>Identificação dos padrões de pensamento, emoção e comportamento a serem trabalhados.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="year">Sessões Seguintes</div>
-                    <div class="timeline-content">
-                        <h3>Intervenção Ativa</h3>
-                        <p>Aplicação de técnicas específicas para os desafios identificados.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="year">Final</div>
-                    <div class="timeline-content">
-                        <h3>Encerramento</h3>
-                        <p>Consolidação das mudanças e estratégias para manutenção dos resultados.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dúvidas -->
-    <section class="section bio-section">
-        <div class="container">
-            <h2 class="title">Perguntas Frequentes</h2>
-            
-            <div class="faq">
-                <details>
-                    <summary>Quantas sessões são necessárias?</summary>
-                    <p>O número varia conforme cada caso. Problemas específicos podem demandar entre 12-20 sessões, enquanto questões mais complexas podem requerer acompanhamento mais prolongado.</p>
-                </details>
-                
-                <details>
-                    <summary>Como são as sessões online?</summary>
-                    <p>Realizadas por plataforma segura, com a mesma eficácia das presenciais quando bem conduzidas. Requerem apenas um ambiente privativo e conexão estável com internet.</p>
-                </details>
-                
-                <details>
-                    <summary>Você atende crianças?</summary>
-                    <p>Atendo adolescentes a partir de 13 anos e adultos. Para crianças menores, posso indicar colegas especializados.</p>
-                </details>
-            </div>
-            
-            <div class="center" style="margin-top: 4rem;">
-                <a href="../index.html#contact" class="button">Tire suas dúvidas</a>
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- Footer -->
-<footer class="section">
-    <div class="container grid">
-        <div class="brand">
-            <a class="logo" href="../index.html">Dr. <span>Castanho</span></a>
-            <p>©2023 Dr. Gonçalo Castanho</p>
-            <p>CRP XX/XXXXX</p>
-        </div>
-        <div class="social">
-            <a href="https://instagram.com/dr.castanho" target="_blank" rel="noopener noreferrer">
-                <i class="icon-instagram"></i>
-            </a>
-            <a href="https://linkedin.com/in/drcastanho" target="_blank" rel="noopener noreferrer">
-                <i class="icon-linkedin"></i>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank" rel="noopener noreferrer">
-                <i class="icon-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-</footer>
-
-<!-- Botão Voltar ao Topo -->
-<a href="#" class="back-to-top" aria-label="Voltar ao topo">
-    <i class="icon-arrow-up"></i>
-</a>
-
-<!-- Scripts -->
-<script src="../assets/js/main.js"></script>
-<script src="../assets/js/gallery.js"></script>
-</body> </html>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../assets/js/carousel.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Atualiza o ano no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

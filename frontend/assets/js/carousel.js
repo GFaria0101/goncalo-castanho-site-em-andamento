@@ -1,63 +1,59 @@
-// Inicialização do Swiper
-document.addEventListener('DOMContentLoaded', () => {
-    // Carrossel de Depoimentos
-    const testimonialSwiper = new Swiper('.testimonial-carousel', {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializa todos os carrosseis
+    const swipers = document.querySelectorAll('.swiper');
+    
+    swipers.forEach(swiper => {
+        new Swiper(swiper, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            }
-        }
-    });
-
-    // Carrossel da Galeria
-    const gallerySwiper = new Swiper('.gallery-carousel', {
-        loop: true,
-        spaceBetween: 30,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 7000,
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                }
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
     });
 
     // Botão voltar ao topo
-    const backToTopButton = document.querySelector('.back-to-top');
-    
-    window.addEventListener('scroll', () => {
+    const backToTop = document.createElement('a');
+    backToTop.href = '#';
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '↑';
+    backToTop.setAttribute('aria-label', 'Voltar ao topo');
+    document.body.appendChild(backToTop);
+
+    window.addEventListener('scroll', function() {
         if (window.scrollY > 300) {
-            backToTopButton.classList.add('show');
+            backToTop.classList.add('show');
         } else {
-            backToTopButton.classList.remove('show');
+            backToTop.classList.remove('show');
         }
+    });
+
+    // Suave ao clicar no botão
+    backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 });
