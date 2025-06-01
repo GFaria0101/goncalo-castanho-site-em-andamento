@@ -1,208 +1,290 @@
-<!DOCTYPE html><html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Sobre o Psicólogo | Dr. Gonçalo Castanho</title> <meta name="description" content="Conheça a trajetória profissional e formação do psicólogo Gonçalo Castanho">
-<!-- CSS -->
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/gallery.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Dr. Gonçalo Castanho | Psicólogo em São Paulo</title>
+    <meta name="description" content="Conheça a trajetória, formação e abordagem terapêutica do Dr. Castanho">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/icons/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="../assets/fonts/style.css">
 
-<!-- Favicon -->
-<link rel="icon" href="../assets/img/icons/favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilos específicos para esta página */
+        .hero-about {
+            background: linear-gradient(rgba(44, 120, 101, 0.8), rgba(44, 120, 101, 0.8)),
+                        url('../assets/img/profissional/goncalo-background.webp') center/cover;
+            color: white;
+            padding: 12rem 0;
+            text-align: center;
+        }
 
-<!-- Fontes -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+        .bio-section {
+            background-color: var(--background);
+        }
 
-<!-- Ícones -->
-<link rel="stylesheet" href="../assets/fonts/style.css">
-</head> <body> <!-- Header --> <header id="header" class="scroll"> <nav class="container"> <a class="logo" href="../index.html">Dr. <span>Castanho</span></a> <div class="menu"> <ul class="grid"> <li><a class="title" href="../index.html#home">Início</a></li> <li><a class="title" href="psicologo.html">Sobre</a></li> <li><a class="title" href="metodologia.html">Método</a></li> <li><a class="title" href="../blog/">Artigos</a></li> <li><a class="title" href="../index.html#contact">Contato</a></li> </ul</div>
-<div class="toggle icon-menu"></div>
+        .personal-photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .personal-photos img {
+            border-radius: 0.8rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .personal-photos img:hover {
+            transform: scale(1.02);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .year {
+            position: absolute;
+            left: -60px;
+            top: 0;
+            width: 90px;
+            padding: 8px;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-about {
+                padding: 8rem 0;
+            }
+
+            .personal-photos {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 30px;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .year {
+                left: -40px;
+                width: 70px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-about h1 {
+                font-size: 2.8rem;
+            }
+
+            .timeline {
+                padding-left: 20px;
+            }
+
+            .year {
+                left: -30px;
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="scroll">
+        <nav class="container">
+            <a class="logo" href="../index.html">Dr. <span>Castanho</span></a>
+            <div class="menu">
+                <ul class="grid">
+                    <li><a class="title" href="../index.html#home">Início</a></li>
+                    <li><a class="title" href="psicologo.html">Sobre</a></li>
+                    <li><a class="title" href="../sobre/metodologia.html">Método</a></li>
+                    <li><a class="title" href="../blog/">Artigos</a></li>
+                    <li><a class="title" href="../index.html#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="toggle icon-menu"></div>
             <div class="toggle icon-close"></div>
         </nav>
     </header>
 
-<main>
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Dr. Gonçalo Castanho</h1>
-            <p>Psicólogo Clínico | CRP XX/XXXXX</p>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-about">
+            <div class="container">
+                <h1>Dr. Gonçalo Castanho</h1>
+                <p>Psicólogo Clínico | CRP XX/XXXXX</p>
+            </div>
+        </section>
 
-    <!-- Biografia -->
-    <section class="section bio-section">
+        <!-- Biografia Expandida -->
+        <section class="section bio-section">
+            <div class="container grid">
+                <div class="bio-content">
+                    <h2 class="title">Fora do Consultório</h2>
+                    
+                    <div class="bio-text">
+                        <p>Nascido em São Paulo, encontrei na psicologia a intersecção perfeita entre minha curiosidade científica e desejo de ajudar pessoas.</p>
+                        
+                        <p>Quando não estou atendendo, você me encontra:</p>
+                        <ul>
+                            <li>Escrevendo artigos para revistas científicas</li>
+                            <li>Ministrando workshops sobre saúde mental corporativa</li>
+                            <li>Praticando montanhismo nos finais de semana</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="personal-photos">
+                    <img src="../assets/img/profissional/goncalo-esportes.webp" 
+                         alt="Dr. Castanho praticando esportes"
+                         loading="lazy"
+                         width="400"
+                         height="300">
+                    <img src="../assets/img/profissional/goncalo-livros.webp" 
+                         alt="Biblioteca pessoal do Dr. Castanho"
+                         loading="lazy"
+                         width="400"
+                         height="300">
+                </div>
+            </div>
+        </section>
+
+        <!-- Linha do Tempo -->
+        <section class="section">
+            <div class="container">
+                <h2 class="title">Trajetória Profissional</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="year">2020-presente</div>
+                        <div class="timeline-content">
+                            <h3>Clínica Particular</h3>
+                            <p>Atendimento individualizado em São Paulo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="year">2016-2020</div>
+                        <div class="timeline-content">
+                            <h3>Hospital Albert Einstein</h3>
+                            <p>Psicólogo clínico do setor de saúde mental</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="year">2012-2016</div>
+                        <div class="timeline-content">
+                            <h3>Mestrado em Psicologia Clínica</h3>
+                            <p>USP - Pesquisa em Terapia Cognitivo-Comportamental</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section class="section gallery-section">
+            <div class="container">
+                <h2 class="title">Momento no Consultório</h2>
+                
+                <div class="gallery">
+                    <img src="../assets/img/profissional/consultorio-1.webp" 
+                         alt="Consultório do Dr. Castanho"
+                         loading="lazy"
+                         width="400"
+                         height="300">
+                    <img src="../assets/img/profissional/consultorio-2.webp" 
+                         alt="Espaço de atendimento"
+                         loading="lazy"
+                         width="400"
+                         height="300">
+                    <img src="../assets/img/profissional/goncalo-palestra.webp" 
+                         alt="Ministrando palestra"
+                         loading="lazy"
+                         width="400"
+                         height="300">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="section">
         <div class="container grid">
-            <div class="bio-content">
-                <h2 class="title">Formação Profissional</h2>
-                <div class="bio-text">
-                    <p><strong>Gonçalo Castanho</strong> é psicólogo clínico com especialização em Terapia Cognitivo-Comportamental pela Universidade de São Paulo (USP) e mais de 8 anos de experiência em atendimento.</p>
-                    
-                    <p>Minha trajetória inclui:</p>
-                    <ul>
-                        <li>Graduação em Psicologia pela PUC-SP (2012-2016)</li>
-                        <li>Especialização em TCC pelo Instituto de Psiquiatria do HC-FMUSP (2017-2019)</li>
-                        <li>Formação em Terapia do Esquema pela Wainer Psicologia (2020)</li>
-                        <li>Certificação em Mindfulness pela Universidade Federal de São Paulo (2021)</li>
-                    </ul>
-                    
-                    <h3>Atuação Clínica</h3>
-                    <p>Desde 2015, já atendi mais de 2.000 sessões, ajudando pacientes com:</p>
-                    <ul>
-                        <li>Transtornos de ansiedade e depressão</li>
-                        <li>Dificuldades de relacionamento</li>
-                        <li>Orientacao parental</li>
-                        <li>Crises existenciais e de carreira</li>
-                    </ul>
-                </div>
+            <div class="brand">
+                <a class="logo" href="../index.html">Dr. <span>Castanho</span></a>
+                <p>©2023 Dr. Gonçalo Castanho</p>
+                <p>CRP XX/XXXXX</p>
             </div>
-            
-            <div class="personal-photos">
-                <img src="../assets/img/profissional/goncalo-formacao.webp" 
-                     alt="Dr. Castanho em formatura"
-                     loading="lazy"
-                     width="600"
-                     height="400">
-                <img src="../assets/img/profissional/goncalo-palestra.webp" 
-                     alt="Dr. Castanho ministrando palestra"
-                     loading="lazy"
-                     width="600"
-                     height="400">
+            <div class="social">
+                <a href="https://instagram.com/dr.castanho" target="_blank" rel="noopener noreferrer">
+                    <i class="icon-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/drcastanho" target="_blank" rel="noopener noreferrer">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank" rel="noopener noreferrer">
+                    <i class="icon-whatsapp"></i>
+                </a>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Linha do Tempo -->
-    <section class="section timeline-section">
-        <div class="container">
-            <h2 class="title">Trajetória Profissional</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="year">2012-2016</div>
-                    <div class="timeline-content">
-                        <h3>Graduação em Psicologia</h3>
-                        <p>PUC-SP - Ênfase em processos clínicos e saúde mental</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="year">2015-2017</div>
-                    <div class="timeline-content">
-                        <h3>Estágio Clínico</h3>
-                        <p>Atendimento em clínica-escola com supervisão de casos</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="year">2017-2019</div>
-                    <div class="timeline-content">
-                        <h3>Especialização em TCC</h3>
-                        <p>Formação avançada no Instituto de Psiquiatria do HC-FMUSP</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="year">2019-Presente</div>
-                    <div class="timeline-content">
-                        <h3>Atendimento Clínico</h3>
-                        <p>Consultório particular em São Paulo e atendimento online</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="icon-arrow-up"></i>
+    </a>
 
-    <!-- Publicações -->
-    <section class="section bio-section">
-        <div class="container">
-            <h2 class="title">Participação em Eventos</h2>
-            
-            <div class="cards grid">
-                <div class="card">
-                    <i class="icon-book"></i>
-                    <h3 class="title">Palestras</h3>
-                    <ul>
-                        <li>"Ansiedade Digital" - Congresso de Psicologia SP (2022)</li>
-                        <li>"Parentalidade Consciente" - Semana da Saúde Mental (2021)</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <i class="icon-edit"></i>
-                    <h3 class="title">Publicações</h3>
-                    <ul>
-                        <li>Capítulo "TCC para Ansiedade Social" - Livro Coletivo (2020)</li>
-                        <li>Artigos no blog sobre saúde mental contemporânea</li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <i class="icon-award"></i>
-                    <h3 class="title">Atuação Acadêmica</h3>
-                    <ul>
-                        <li>Supervisor clínico de estágio desde 2018</li>
-                        <li>Ministrante de cursos de extensão em TCC</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeria -->
-    <section class="section gallery-section">
-        <div class="container">
-            <h2 class="title">Momento Profissionais</h2>
-            <p class="subtitle">Registros da minha trajetória na psicologia</p>
-            
-            <div class="gallery">
-                <img src="../assets/img/profissional/goncalo-consultorio.webp" 
-                     alt="Dr. Castanho no consultório"
-                     loading="lazy"
-                     width="400"
-                     height="300">
-                <img src="../assets/img/profissional/goncalo-eventos.webp" 
-                     alt="Participação em evento"
-                     loading="lazy"
-                     width="400"
-                     height="300">
-                <img src="../assets/img/profissional/goncalo-certificacao.webp" 
-                     alt="Cerimônia de certificação"
-                     loading="lazy"
-                     width="400"
-                     height="300">
-            </div>
-        </div>
-    </section>
-</main>
-
-<!-- Footer -->
-<footer class="section">
-    <div class="container grid">
-        <div class="brand">
-            <a class="logo" href="../index.html">Dr. <span>Castanho</span></a>
-            <p>©2023 Dr. Gonçalo Castanho</p>
-            <p>CRP XX/XXXXX</p>
-        </div>
-        <div class="social">
-            <a href="https://instagram.com/dr.castanho" target="_blank" rel="noopener noreferrer">
-                <i class="icon-instagram"></i>
-            </a>
-            <a href="https://linkedin.com/in/drcastanho" target="_blank" rel="noopener noreferrer">
-                <i class="icon-linkedin"></i>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank" rel="noopener noreferrer">
-                <i class="icon-whatsapp"></i>
-            </a>
-        </div>
-    </div>
-</footer>
-
-<!-- Botão Voltar ao Topo -->
-<a href="#" class="back-to-top" aria-label="Voltar ao topo">
-    <i class="icon-arrow-up"></i>
-</a>
-
-<!-- Scripts -->
-<script src="../assets/js/main.js"></script>
-<script src="../assets/js/gallery.js"></script>
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/gallery.js"></script>
 </body>
 </html>

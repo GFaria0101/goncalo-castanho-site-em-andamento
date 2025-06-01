@@ -1,16 +1,55 @@
 :root {
-    --primary: #2c7865;
-    --primary-dark: #004445;
-    --primary-light: #e3f4f0;
-    --secondary: #f8b400;
-    --text: #2c3639;
-    --text-light: #5c5c5c;
-    --background: #f9f9f9;
-    --white: #ffffff;
-    --gray: #e4e4e4;
-    --gray-light: #f5f5f5;
-    --shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
-    --transition: all 0.3s ease;
+  --primary: #2c7865;
+  --primary-dark: #004445;
+  --primary-light: #e3f4f0;
+  --secondary: #f8b400;
+  --text: #2c3639;
+  --text-light: #5c5c5c;
+  --background: #f9f9f9;
+  --white: #ffffff;
+  --gray: #e4e4e4;
+  --shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+}
+
+/* Controle geral de imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* Imagens específicas */
+.author-img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+}
+
+.blog-featured-image {
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+  }
 }
 
 * {
